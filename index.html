@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="view port" content="width=device-width, initial-scale=1.0">
+        <title>BELAJAR JAVASCRIPT DOM</title>
+    </head>
+<body>
+
+    <button onclick="show()">CLICK ME</button>
+    <div>
+        <div id="content"></div>
+        <ul id="list"></ul>
+    </div>
+
+    <script>
+
+    const coffe = [{
+        name: "Jamal coffe",
+        address: "Jalan Setu Cipayung",
+        schedule: {open: "9.00", close: "21.00"},
+        menu: ["Teh", " Coffe", " Lemon Tea"]
+    },
+    {
+        name: "Fadel coffe",
+        address: "Bekasi",
+        schedule: {open: "10.00", close: "22.00"},
+        menu: ["Martabak", " Temulawak", " Lemon Tea"]
+    },
+    {
+        name: "Agung coffe",
+        address: "Ciracas",
+        schedule: {open: "11.00", close: "23.00"},
+        menu: ["v60", " Sari Gadung", " Madu Tea"]
+    }];
+    const content = document.getElementById("content");
+    const list = docuement.getElementById("list");
+
+    function show(){
+        for(let i = 0; i < coffe.length; i++){
+            content.innerHTML += `<h1>Selamat Datang di ${coffe[i].name}</h1>
+                                  <h2>Alamat di ${coffe[i].address}</h2>
+                                  <p>Kita buka jam ${coffe[i].schedule.open} dan tutup di jam ${coffe[i].schedule.close}</p>
+                                  <p>Menu yang tersedia : ${coffe[i].menu} </p>
+                                  <br>
+                                  <br>`;
+        }
+
+    }
+
+    </script>
+</body>
+</html>
